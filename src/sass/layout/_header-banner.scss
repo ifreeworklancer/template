@@ -1,0 +1,85 @@
+#header-banner {
+    height: 100vh;
+    max-height: 1080px;
+    overflow: hidden;
+    background-image: linear-gradient(0, rgb(27, 44, 71) 0%, rgb(19, 20, 23) 70%);
+    z-index: 5;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        padding: 70px 0 50px;
+        height: auto;
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        background: url('../images/icon/pattern.png');
+    }
+
+    .decor-block {
+        @extend %pos;
+        left: -40%;
+        right: -40%;
+        border-radius: 50%;
+        transform: translateY(90vh);
+        background: #fff;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            display: none;
+        }
+
+        @media (min-width: 1700px) {
+            transform: translateY(82vh);
+        }
+    }
+}
+
+.header-banner-speaker-img {
+    position: relative;
+    bottom: -50px;
+    padding-top: 600px;
+    @extend %img;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-top: 300px;
+        background-size: contain;
+        bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding-top: 400px;
+        background-size: contain;
+        bottom: 0;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, md)) {
+        padding-top: 500px;
+        bottom: -100px;
+    }
+
+    @media (min-width: 1700px) {
+        bottom: -75px;
+    }
+}
+
+.header-banner-item {
+    position: relative;
+    z-index: 10;
+
+    &__descr {
+        padding-left: 70px;
+        font-size: 18px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 1px;
+            background: $primary;
+        }
+    }
+}
