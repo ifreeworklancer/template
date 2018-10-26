@@ -11,3 +11,14 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+%pater-decor {
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 25px;
+        background: url('../images/icon/decor/pattern.png');                
+    }
+}

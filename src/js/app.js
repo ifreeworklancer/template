@@ -41,6 +41,25 @@ window.jQuery = window.$ = jquery;
 
 
     /**
+     * Tabs
+     */
+    $('.programm-tabs-prev-item').eq(0).addClass('active');
+    $('.programm-tabs-content-item').eq(0).addClass('active');
+    $('.programm-tabs-content-item-body').eq(0).slideDown();
+    $('.programm-tabs-content').on('click', '.programm-tabs-content-item-title', function() {
+        const index = $(this).parents('.programm-tabs-content-item').data('index');
+
+        $('.programm-tabs-content-item').removeClass('active');
+        $('.programm-tabs-content-item-body').slideUp();
+        $(this).parents('.programm-tabs-content-item').toggleClass('active');
+        $(this).siblings('.programm-tabs-content-item-body').slideToggle();
+        $('.programm-tabs-prev-item').removeClass('active');
+        $('.programm-tabs-prev-item').eq(index).addClass('active');
+        console.log()
+    })
+
+
+    /**
      * Sliders reviews
      */
 
