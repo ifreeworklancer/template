@@ -150,7 +150,7 @@
                             <div class="programm-tabs-prev-item-title">
                                 Lorem ipsum dolor sit.2
                             </div>
-                            <div class="programm-tabs-prev-item-img" style="background-image: url('images/content/programm/programm-item-2.jpg');"></div>
+                            <div class="programm-tabs-prev-item-img" style="background-image: url('images/content/programm/programm-item-1.jpg');"></div>
                         </div>
                         <div class="programm-tabs-prev-item">
                             <div class="programm-tabs-prev-item-title">
@@ -162,7 +162,7 @@
                             <div class="programm-tabs-prev-item-title">
                                 Lorem ipsum dolor sit.4
                             </div>
-                            <div class="programm-tabs-prev-item-img" style="background-image: url('images/content/programm/programm-item-2.jpg');"></div>
+                            <div class="programm-tabs-prev-item-img" style="background-image: url('images/content/programm/programm-item-1.jpg');"></div>
                         </div>
                         <div class="programm-tabs-prev-item">
                             <div class="programm-tabs-prev-item-title">
@@ -174,7 +174,7 @@
                             <div class="programm-tabs-prev-item-title">
                                 Lorem ipsum dolor sit.6
                             </div>
-                            <div class="programm-tabs-prev-item-img" style="background-image: url('images/content/programm/programm-item-2.jpg');"></div>
+                            <div class="programm-tabs-prev-item-img" style="background-image: url('images/content/programm/programm-item-1.jpg');"></div>
                         </div>
                     </div>
                 </div>
