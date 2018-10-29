@@ -3,7 +3,7 @@
 require_once('views/base/header.php');
 
 
-$sections = ['header-banner' , 'seminar' ,'for-who' , 'singup' , 'about' , 'programm' , 'secondary' , 'format'];
+$sections = ['header-banner' , 'seminar' ,'for-who' , 'singup' , 'about' , 'programm' , 'secondary' , 'format' , 'reviews'];
 
 foreach ($sections as $section) {
 	include(__DIR__ . '/views/sections/' . $section . '.php');

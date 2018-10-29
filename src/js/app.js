@@ -18,7 +18,7 @@ window.jQuery = window.$ = jquery;
         if (menu.is(':visible')) {
             menu.slideUp();
         } else {
-            menu.slideDown().css('display' , 'flex');
+            menu.slideDown().css('display', 'flex');
         }
     });
 
@@ -46,7 +46,7 @@ window.jQuery = window.$ = jquery;
     $('.programm-tabs-prev-item').eq(0).addClass('active');
     $('.programm-tabs-content-item').eq(0).addClass('active');
     $('.programm-tabs-content-item-body').eq(0).slideDown();
-    $('.programm-tabs-content').on('click', '.programm-tabs-content-item-title', function() {
+    $('.programm-tabs-content').on('click', '.programm-tabs-content-item-title', function () {
         const index = $(this).parents('.programm-tabs-content-item').data('index');
 
         $('.programm-tabs-content-item').removeClass('active');
@@ -58,40 +58,46 @@ window.jQuery = window.$ = jquery;
         console.log()
     })
 
+    /**
+     * Modal
+     */
+    $('[data-idModal]').on('click', function (e) {
+        e.preventDefault();
+        var idModal = $(this).data('idmodal');
+        $(`#${idModal}`).addClass('active');
+        $('.modal-mask').addClass('active');
+    });
+
+    $('.close-modal').on('click', function () {
+        $('.format-modal').removeClass('active');
+        $('.modal-mask').removeClass('active');
+    })
+
+    $('.modal-mask').on('click', function () {
+        $('.format-modal').removeClass('active');
+        $('.modal-mask').removeClass('active');
+    })
+
 
     /**
-     * Sliders reviews
+     *  Slider reviews
      */
 
+    if ($('.reviews-slider')) {
 
-    // if ($('.reviews-slider')) {
+        var elem1 = document.querySelector('.reviews-slider');
+        if (elem1) {
 
-    //     var elem1 = document.querySelector('.reviews-slider');
-    //     if (elem1) {
+            const flkty1 = new Flickity(elem1, {
+                prevNextButtons: false,
+                cellAlign: 'center',
+                contain: true,
+                draggable: true,
+                wrapAround: true,
+            });
 
+        }
+    }
 
-    //         var flkty1 = new Flickity(elem1, {
-    //             prevNextButtons: false,
-    //             cellAlign: 'center',
-    //             contain: false,
-    //             draggable: true,
-    //             wrapAround: true,
-    //             initialIndex: 1
-    //         });
-
-    //         var prevArrowReviews = document.querySelector('.slider-nav-arrow-item--prev-reivews');
-
-    //         prevArrowReviews.addEventListener('click', function () {
-    //             flkty1.previous(true, false);
-    //         });
-
-    //         var nextArrowReviews = document.querySelector('.slider-nav-arrow-item--prev-next');
-
-    //         nextArrowReviews.addEventListener('click', function () {
-    //             flkty1.next(true, false);
-    //         });
-
-    //     }
-    // }
 
 })(jQuery)

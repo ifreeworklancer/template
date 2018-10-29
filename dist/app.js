@@ -2107,38 +2107,43 @@ window.jQuery = window.$ = __WEBPACK_IMPORTED_MODULE_0_jquery___default.a;
     });
 
     /**
-     * Sliders reviews
+     * Modal
+     */
+    $('[data-idModal]').on('click', function (e) {
+        e.preventDefault();
+        var idModal = $(this).data('idmodal');
+        $('#' + idModal).addClass('active');
+        $('.modal-mask').addClass('active');
+    });
+
+    $('.close-modal').on('click', function () {
+        $('.format-modal').removeClass('active');
+        $('.modal-mask').removeClass('active');
+    });
+
+    $('.modal-mask').on('click', function () {
+        $('.format-modal').removeClass('active');
+        $('.modal-mask').removeClass('active');
+    });
+
+    /**
+     *  Slider reviews
      */
 
-    // if ($('.reviews-slider')) {
+    if ($('.reviews-slider')) {
 
-    //     var elem1 = document.querySelector('.reviews-slider');
-    //     if (elem1) {
+        var elem1 = document.querySelector('.reviews-slider');
+        if (elem1) {
 
-
-    //         var flkty1 = new Flickity(elem1, {
-    //             prevNextButtons: false,
-    //             cellAlign: 'center',
-    //             contain: false,
-    //             draggable: true,
-    //             wrapAround: true,
-    //             initialIndex: 1
-    //         });
-
-    //         var prevArrowReviews = document.querySelector('.slider-nav-arrow-item--prev-reivews');
-
-    //         prevArrowReviews.addEventListener('click', function () {
-    //             flkty1.previous(true, false);
-    //         });
-
-    //         var nextArrowReviews = document.querySelector('.slider-nav-arrow-item--prev-next');
-
-    //         nextArrowReviews.addEventListener('click', function () {
-    //             flkty1.next(true, false);
-    //         });
-
-    //     }
-    // }
+            var flkty1 = new __WEBPACK_IMPORTED_MODULE_1_flickity___default.a(elem1, {
+                prevNextButtons: false,
+                cellAlign: 'center',
+                contain: true,
+                draggable: true,
+                wrapAround: true
+            });
+        }
+    }
 })(jQuery);
 
 /***/ }),
