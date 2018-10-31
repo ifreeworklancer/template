@@ -6,11 +6,13 @@ require_once('../views/base/header-secondary.php');
 <section id="thanks-page">
     <div class="container h-100">
         <div class="row h-100 flex-column justify-content-center">
-            <div class="col-sm-4 p-0">
+            <div class="col-sm-6 col-lg-4 p-0 text-center mx-auto">
                 <div class="thanks-page-item">
-                    <h1 class="thanks-page-item__title"></h1>
-                    <div class="thanks-page-item__description"></div>
-                    <a href="#" class="btn btn-primary">на главную</a>
+                    <h1 class="thanks-page-item__title">
+                        СПАСИБО!
+                    </h1>
+                    <div class="thanks-page-item__description my-4">Наш менеджер с Вами свяжется</div>
+                    <a href="#" class="btn btn-primary">На главную</a>
                 </div>
             </div>
         </div>
@@ -40,5 +42,6 @@ require_once('../views/base/header-secondary.php');
     </ul>
 </section>
 
-<?php?>
+<?php
+
 require_once('../views/base/footer-secondary.php');
